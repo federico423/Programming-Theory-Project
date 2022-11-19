@@ -7,18 +7,23 @@ public class Cube : Shape
 {
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
+
+        shapeType = "Cube";
+        shapeMaterial = GetComponent<Material>();
+        shapeColor = new Color32(166, 0, 0, 255);
+        colorName = "Red";
     }
 
     void Update()
     {
-        
+
     }
 
     // Polymorphism
     public override string DisplayText()
     {
-        string shapeText = "Cube clicked";
+        string shapeText = "You clicked a " + colorName + " " + shapeType;
         return shapeText;
     }
 }
