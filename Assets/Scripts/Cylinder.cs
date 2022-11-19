@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Inheritance
+// INHERITANCE
 public class Cylinder : Shape
 {
     void Start()
@@ -15,12 +15,7 @@ public class Cylinder : Shape
         colorName = "Green";
     }
 
-    void Update()
-    {
-
-    }
-
-    // Polymorphism
+    // POLYMORPHISM
     public override string DisplayText()
     {
         string shapeText = "You clicked a " + colorName + " " + shapeType;

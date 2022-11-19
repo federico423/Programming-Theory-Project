@@ -6,25 +6,23 @@ using TMPro;
 public class Shape : MonoBehaviour
 {
     public TextMeshProUGUI shapeText;
+    public TextMeshProUGUI playerNameText;
 
     public Rigidbody rb;
 
-    // Encapsulation
+    // ENCAPSULATION
     protected string shapeType { get; set; }
     protected Material shapeMaterial { get; set; }
     protected Color shapeColor { get; set; }
     protected string colorName { get; set; }
 
+
     private float jumpForce = 5f;
-
-    void Start()
-    {
-
-    }
 
     void Update()
     {
-
+        // ABSTRACTION
+        PrintName();
     }
 
     private void OnMouseDown()
@@ -35,15 +33,21 @@ public class Shape : MonoBehaviour
         Jump();
     }
 
-    // Polymorphism
+    // POLYMORPHISM
     public virtual string DisplayText()
     {
         string shapeText = "Shape clicked";
         return shapeText;
     }
 
-    void Jump()
+    private void Jump()
     {
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+    }
+
+    // ABSTRACTION
+    private void PrintName()
+    {
+        playerNameText.text = "Player: " + PlayerInfo.instance.playerName;
     }
 }

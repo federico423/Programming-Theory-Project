@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Inheritance
+// INHERITANCE
 public class Sphere : Shape
 {
     void Start()
@@ -15,12 +15,7 @@ public class Sphere : Shape
         colorName = "Blue";
     }
 
-    void Update()
-    {
-
-    }
-
-    // Polymorphism
+    // POLYMORPHISM
     public override string DisplayText()
     {
         string shapeText = "You clicked a " + colorName + " " + shapeType;
